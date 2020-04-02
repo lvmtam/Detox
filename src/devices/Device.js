@@ -104,12 +104,6 @@ class Device {
     return this.deviceDriver.name;
   }
 
-  getAppName() {
-    let appName=this._bundleId;
-    let names=appName.split('.');
-    return names[2];
-  }
-
   async takeScreenshot(name) {
     if (!name) {
       throw new Error('Cannot take a screenshot with an empty name.');
